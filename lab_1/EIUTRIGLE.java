@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EIUTRIGLE {
@@ -8,18 +9,18 @@ public class EIUTRIGLE {
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
+        Arrays.sort(a);
 
         int count = 0;
-        for (int i = 0; i < n - 2; i++) {
-            for (int j = i + 1; j < n - 1; j++) {
-                for (int k = j + 1; k < n; k++) {
-                    int side1 = a[i];
-                    int side2 = a[j];
-                    int side3 = a[k];
-                    if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
-                        count++;
-                    }
-                }
+        for (int k = n - 1; k >= 2; k--) {
+            int i = 0;
+            int j = k - 1;
+            while (i < j) {
+                if (a[i] + a[j] > a[k]) {
+                    count += (j - i);
+                    j--;
+                } else
+                    i++;
             }
         }
         System.out.println(count);
