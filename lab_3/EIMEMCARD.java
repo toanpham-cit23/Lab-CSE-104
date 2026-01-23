@@ -19,12 +19,9 @@ public class EIMEMCARD {
                 sb.append((long) discount).append(".0");
             else
                 sb.append(discount);
-
             if (i < n - 1) sb.append(" ");
-
             total += price;
         }
-
         System.out.print(sb);
     }
 }
