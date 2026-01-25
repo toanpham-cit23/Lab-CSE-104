@@ -29,9 +29,6 @@ The project is organized into 10 main directories, corresponding to 10 weeks of 
 ---
 
 ## How to Pull
-To keep your local workspace up to date with the latest changes from this repository, follow these steps:
-
-1. **Open your terminal** (or Git Bash) in your project directory.
-2. **Fetch and merge** the latest changes from the remote main branch:
+You can clone the repository with this link:
    ```bash
-   git pull origin main
+   https://github.com/toanpham-cit23/Lab-CSE-104.git
