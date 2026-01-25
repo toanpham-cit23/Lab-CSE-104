@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EIDISCOUNT3_ {
+public class EIDISCOUNT3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         long money = sc.nextLong();
