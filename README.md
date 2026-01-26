@@ -4,8 +4,8 @@ This repository contains all lab assignments and practical exercises for the **C
 
 ## Repository Structure
 The project is organized into 10 main directories, corresponding to 10 weeks of the course:
-* `Lab01/` to `Lab04/`: Completed exercises and course materials.
-* `Lab05/` to `Lab10/`: Upcoming lab sessions.
+* `Lab01/` to `Lab05/`: Completed exercises and course materials.
+* `Lab06/` to `Lab10/`: Upcoming lab sessions.
 
 ## Lab Content Summary
 
@@ -23,7 +23,10 @@ The project is organized into 10 main directories, corresponding to 10 weeks of 
 ### Lab 04: Advanced Problem Solving
 * **Exercises:** EISALARY2, EITAX, EIGROSS, EIGROSS2, EIBANKRATE, EIDINRATE, EIAPP21222FQ1, EIAPP21222FQ2.
 
-### Lab 05 - Lab 10:
+### Lab 05: Advanced Problem Solving 
+* **Exercises:** EIUPASSBOOK, EIINTEREST1, EIVCHR1, EIVCHR2, EIVCHR3.
+
+### Lab 06 - Lab 10:
 * ??? (To be updated)
 
 ---
