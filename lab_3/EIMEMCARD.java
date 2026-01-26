@@ -3,25 +3,27 @@ import java.util.Scanner;
 public class EIMEMCARD {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        long total = 0;
-
         StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < n; i++) {
-            long price = sc.nextLong();
-            double discount = 0;
-            if (total > 200_000_000L)      discount = price * 0.07;
-            else if (total > 50_000_000L)  discount = price * 0.05;
-            else if (total > 20_000_000L)  discount = price * 0.03;
-            else if (total > 1_000_000L)   discount = price * 0.02;
-            if (discount == (long) discount)
-                sb.append((long) discount).append(".0");
-            else
-                sb.append(discount);
-            if (i < n - 1) sb.append(" ");
-            total += price;
+        int items = sc.nextInt();
+        long[] amount = new long[items];
+        for (int i = 0; i < amount.length; i++) {
+            amount[i] = sc.nextLong();
         }
-        System.out.print(sb);
+        long[] levels = { 0, 1_000_000, 20_000_000, 50_000_000, 200_000_000, Long.MAX_VALUE / 2 };
+        double[] rates = { 0, 0.02, 0.03, 0.05, 0.07 };
+        double discount = 0;
+        long spending = 0;
+        for (int i = 0; i < amount.length; i++) {
+            for (int j = 0; j < levels.length; j++) {
+                if (spending < levels[j]) {
+                    discount = amount[i] * rates[j - 1];
+                    sb.append(discount).append(" ");
+                    break;
+                }
+
+            }
+            spending += amount[i];
+        }
+        System.out.println(sb.toString());
     }
 }
